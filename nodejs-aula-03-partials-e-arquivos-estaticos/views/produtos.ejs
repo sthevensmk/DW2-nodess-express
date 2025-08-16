@@ -1,0 +1,17 @@
+<%- include('partials/navbar.ejs') %>
+<%- include('partials/header.ejs') %>
+    <center>
+    <h1>Confira nossa lista de produtos:</h1>
+    <% if (!produto) { %>
+        <% produtos.forEach(produto => { %>
+            <p><a href="/produtos/<%=produto%>"><%= produto %></a></p>
+        <% }) %>
+    <% } else {%>
+        <p> <%= produto %></p>
+    <% } %>
+
+
+    <hr>
+        <p>Faça seu pedido agora!</p>
+    </center>
+    <%- include('partials/footer.ejs') %>
